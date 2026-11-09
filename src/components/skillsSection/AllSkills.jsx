@@ -8,41 +8,59 @@ import { SiPhp } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
-import { SiBootstrap } from "react-icons/si";
+import { SiBootstrap, SiNextdotjs, SiFlutter } from "react-icons/si";
 
 
 const skills = [
   {
     skill: "HTML",
     icon: FaHtml5,
+    color: "#E34F26",
   },
   {
     skill: "CSS",
     icon: FaCss3Alt,
+    color: "#1572B6",
   },
   {
     skill: "JavaScript",
     icon: IoLogoJavascript,
+    color: "#F7DF1E",
   },
   {
     skill: "Laravel",
     icon: SiLaravel,
+    color: "#FF2D20",
   },
   {
     skill: "ReactJS",
     icon: FaReact,
+    color: "#61DAFB",
+  },
+  {
+    skill: "Next.js",
+    icon: SiNextdotjs,
+    color: "rgb(var(--c-white))",
+  },
+  {
+    skill: "Flutter",
+    icon: SiFlutter,
+    color: "#54C5F8",
   },
   {
     skill: "PHP",
     icon: SiPhp,
+    color: "#777BB4",
   },
   {
     skill: "Bootstrap",
     icon: SiBootstrap,
+    color: "#7952B3",
   },
   {
     skill: "TailwindCSS",
     icon: RiTailwindCssFill,
+    color: "#06B6D4",
   },
 ];
 
@@ -62,7 +80,7 @@ const AllSkills = () => {
               <SingleSkill
                 key={index}
                 text={item.skill}
-                imgSvg={<item.icon />}
+                imgSvg={<item.icon style={{ color: item.color }} />}
               />
             </motion.div>
           );

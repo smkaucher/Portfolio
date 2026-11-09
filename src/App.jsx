@@ -6,9 +6,9 @@ import HeroGradient from "./components/heroSection/HeroGradient";
 import HeroMain from "./components/heroSection/HeroMain";
 import NavbarMain from "./components/navbar/NavbarMain";
 import ProjectsMain from "./components/projectsSection/ProjectsMain";
+import ChatBot from "./components/chatbot/ChatBot";
 import SkillsMain from "./components/skillsSection/SkillsMain";
 import SubSkills from "./components/skillsSection/SubSkills";
-import SubHeroMain from "./components/subHeroSection/SubHeroMain";
 
 function App() {
   return (
@@ -16,7 +16,6 @@ function App() {
       <NavbarMain />
       <HeroMain />
       <HeroGradient />
-      <SubHeroMain />
       <AboutMeMain />
       <SkillsMain />
       <SubSkills />
@@ -24,6 +23,7 @@ function App() {
       <ProjectsMain />
       <ContactMeMain />
       <FooterMain />
+      <ChatBot />
     </main>
   );
 }

@@ -1,0 +1,10 @@
+name = "kaucher-chat"
+main = "chat-worker.js"
+compatibility_date = "2025-01-01"
+
+[ai]
+binding = "AI"
+
+[vars]
+# Lock this to your site once it is live, e.g. "https://your-site.vercel.app"
+ALLOWED_ORIGIN = "*"

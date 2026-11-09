@@ -1,45 +1,34 @@
 import SingleExperience from "./SingleExperience";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
 
 const experiences = [
   {
-    job: "Web Developer(Laravel)",
+    job: "Software Engineer",
+    company: "Regantify IT Solution",
+    date: "Sep 2026 - Present",
+    responsibilities: [
+      "Building the vendor dashboard with React and TypeScript.",
+      "Developing the public storefront with Next.js.",
+      "Working on e-commerce features for multi-vendor stores.",
+    ],
+  },
+  {
+    job: "Web Developer (Laravel)",
     company: "Creative Software",
-    date: "2025 - Present",
+    date: "2025 - Aug 2026 (1.5 Years)",
     responsibilities: [
       "Analyzed client needs: delivered projects on time.",
-" Built and maintained RESTful APIs, implemented MVC architecture for scalability",
-"Integrated payment gateways and APIs for seamless user experience.",
-    ]
+      "Built and maintained RESTful APIs, implemented MVC architecture for scalability.",
+      "Integrated payment gateways and APIs for seamless user experience.",
+    ],
   },
- 
- 
 ];
 
 const ExperienceTopRight = () => {
   return (
-    <div className="flex md:flex-row sm:flex-col items-center justify-between">
-      {experiences.map((experience, index) => {
-        return (
-          <>
-            <SingleExperience key={index} experience={experience} />
-            {index < 2 ? (
-              <motion.div
-                variants={fadeIn("right", 0)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.7 }}
-              >
-               
-              </motion.div>
-            ) : (
-              ""
-            )}
-          </>
-        );
-      })}
+    <div className="flex flex-col items-center gap-2">
+      {experiences.map((experience) => (
+        <SingleExperience key={experience.company} experience={experience} />
+      ))}
     </div>
   );
 };

@@ -2,13 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/images/HexaPic.png" />
+    <link rel="icon" type="image/png" href="/images/kaucher.png" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0 minimum-scale=1"
     />
 
-    <title> Kaucher ahmend </title>
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <title>Kaucher Ahmed | Software Engineer</title>
+    <meta name="description" content="Kaucher Ahmed, software engineer working with Laravel, React, Next.js and Flutter." />
   </head>
   <body>
     <div id="root"></div>

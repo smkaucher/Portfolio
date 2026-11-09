@@ -1,11 +1,18 @@
 const NavbarLogo = () => {
   return (
-    <div>
-      <h1 className="text-white  text-2xl sm:hidden md:block">
-        Kaucher Ahmed
-      </h1>
-     
-    </div>
+    <a
+      href="#"
+      onClick={(e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }}
+      className="font-mono text-lg sm:text-xl font-semibold tracking-tight select-none"
+    >
+      <span className="text-darkCyan">&lt;</span>
+      <span className="text-lightCyan">Kaucher</span>
+      <span className="text-cyan"> /</span>
+      <span className="text-darkCyan">&gt;</span>
+    </a>
   );
 };
 

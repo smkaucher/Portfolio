@@ -3,6 +3,93 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Night: black + VS Code blue. Day: white + maroon. Values are "r g b".
+   Token names are historic: orange = primary (buttons), cyan = bright accent. */
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --c-darkBrown: 8 9 11; /* page bg */
+  --c-black: 15 17 22; /* panels */
+  --c-brown: 30 38 52; /* borders / surfaces */
+  --c-lightBrown: 46 64 92;
+  --c-white: 226 234 244; /* foreground */
+  --c-cyan: 86 170 235; /* accent text, VS Code blue */
+  --c-lightCyan: 156 220 254; /* #9cdcfe */
+  --c-darkCyan: 0 122 204; /* #007acc */
+  --c-orange: 0 122 204; /* primary blue */
+  --c-lightOrange: 38 150 230;
+  --c-darkOrange: 0 90 160;
+  --c-grey: 128 148 176;
+  --c-lightGrey: 150 166 188;
+  --c-darkGrey: 30 36 46;
+
+  --glass-bg: rgb(255 255 255 / 0.05);
+  --glass-bg-strong: rgb(255 255 255 / 0.09);
+  --glass-border: rgb(140 190 255 / 0.15);
+  --glass-shadow: 0 8px 32px rgb(0 0 0 / 0.55), inset 0 1px 0 rgb(255 255 255 / 0.08);
+  --blob-a: rgb(0 122 204 / 0.30);
+  --blob-b: rgb(10 70 140 / 0.28);
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --c-darkBrown: 255 255 255;
+  --c-black: 251 244 245;
+  --c-brown: 244 228 231;
+  --c-lightBrown: 226 190 198;
+  --c-white: 42 10 18;
+  --c-cyan: 128 0 32; /* maroon accent */
+  --c-lightCyan: 150 28 54;
+  --c-darkCyan: 100 0 26;
+  --c-orange: 140 14 42;
+  --c-lightOrange: 176 44 72;
+  --c-darkOrange: 96 0 24;
+  --c-grey: 120 84 90;
+  --c-lightGrey: 112 82 88;
+  --c-darkGrey: 226 204 209;
+
+  --glass-bg: rgb(255 255 255 / 0.55);
+  --glass-bg-strong: rgb(255 255 255 / 0.75);
+  --glass-border: rgb(128 0 32 / 0.18);
+  --glass-shadow: 0 8px 32px rgb(128 0 32 / 0.14), inset 0 1px 0 rgb(255 255 255 / 0.9);
+  --blob-a: transparent;
+  --blob-b: transparent;
+}
+
 body {
-  @apply bg-darkBrown;
+  @apply bg-darkBrown text-white;
+  background-image:
+    radial-gradient(60rem 40rem at 8% 6%, var(--blob-a), transparent 60%),
+    radial-gradient(55rem 40rem at 95% 35%, var(--blob-b), transparent 60%),
+    radial-gradient(50rem 36rem at 15% 80%, var(--blob-b), transparent 60%);
+  background-attachment: fixed;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+/* glassmorphism: frosted panel that works on both themes */
+.glass {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+.glass-strong {
+  background: var(--glass-bg-strong);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* day mode: plain white page, no decorative glows */
+:root[data-theme="light"] .hero-deco {
+  display: none;
 }
