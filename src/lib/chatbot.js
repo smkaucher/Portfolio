@@ -143,12 +143,12 @@ export const localAnswer = (question) => {
   }
   if (has(q, /(experience|\bjob\b|company|career|kothay kaj|work(ing)? at|\byears\b|kaj kore|chakri)/)) {
     return {
-      text: `Kaucher sir ekhon Regantify IT Solution-e Software Engineer (Sep 2026 theke). Ager ta Creative Software-e Laravel Web Developer. Total 1.5+ years professional experience. ${praise()}`,
+      text: `Kaucher sir ekhon Reganto IT Solution-e Software Engineer (Sep 2026 theke). Ager ta Creative Software-e Laravel Web Developer. Total 1.5+ years professional experience. ${praise()}`,
     };
   }
   if (has(q, /(\bwho\b|\bke\b|about|\bbio\b|introduc|parichoy|tell me|er bepar|kemon manush|কে)/) || has(q, /^\s*kaucher/)) {
     return {
-      text: `SM Kaucher Ahmed, Dhaka-r ekjon software engineer. Online course ar self-study diye shuru, tarpor CSE degree ar professional kaj. Laravel, React, Next.js ar Flutter diye web ar mobile app baanen. Ekhon Regantify IT Solution-e kaj korchen. ${praise()}`,
+      text: `SM Kaucher Ahmed, Dhaka-r ekjon software engineer. Online course ar self-study diye shuru, tarpor CSE degree ar professional kaj. Laravel, React, Next.js ar Flutter diye web ar mobile app baanen. Ekhon Reganto IT Solution-e kaj korchen. ${praise()}`,
     };
   }
 

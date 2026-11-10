@@ -36,7 +36,7 @@ const steps = [
   },
   {
     label: "Now",
-    title: "Software Engineer, Regantify IT Solution",
+    title: "Software Engineer, Reganto IT Solution",
     meta: "Since Sep 2026",
     text: "Building a multi-vendor e-commerce platform with React, Next.js and NestJS.",
     now: true,
@@ -50,10 +50,10 @@ const Step = ({ step }) => {
   return (
     <li
       ref={ref}
-      className="grid grid-cols-[28px_1fr] md:grid-cols-[140px_28px_1fr] gap-x-4 pb-4 last:pb-0"
+      className="grid grid-cols-[28px_1fr] gap-x-3 pb-2 last:pb-0"
     >
       <p
-        className={`col-start-2 row-start-1 md:col-start-1 md:text-right text-xl md:text-2xl font-bold leading-8 transition-colors duration-700 ${
+        className={`col-start-2 row-start-1 text-sm font-bold leading-6 transition-colors duration-700 ${
           lit ? "text-cyan" : "text-lightBrown"
         }`}
       >
@@ -61,26 +61,26 @@ const Step = ({ step }) => {
       </p>
 
       <span
-        className={`col-start-1 row-start-1 md:col-start-2 mt-[9px] h-3.5 w-3.5 justify-self-center rounded-full border-2 transition-all duration-700 ${
+        className={`col-start-1 row-start-1 mt-[5px] h-3 w-3 justify-self-center rounded-full border-2 transition-all duration-700 ${
           lit ? "border-orange bg-orange shadow-cyanShadow" : "border-lightBrown bg-darkBrown"
         }`}
       ></span>
 
       <div
-        className={`col-start-2 row-start-2 md:col-start-3 md:row-start-1 mt-2 md:mt-0 rounded-xl px-4 py-3 transition-opacity duration-700 ${
+        className={`col-start-2 row-start-2 mt-0.5 rounded-lg px-3 py-1.5 transition-opacity duration-700 ${
           step.featured || step.now ? "glass-strong" : "glass"
         } ${lit ? "opacity-100" : "opacity-60"}`}
       >
-        <h4 className="text-base md:text-lg font-bold leading-snug text-white">{step.title}</h4>
+        <h4 className="text-sm md:text-base font-bold leading-snug text-white">{step.title}</h4>
         <p className="flex items-center gap-2 text-xs text-cyan">
           {step.now && <span className="h-2 w-2 rounded-full bg-cyan animate-pulse"></span>}
           {step.meta}
         </p>
-        <p className="mt-1.5 max-w-[60ch] text-sm text-lightGrey">{step.text}</p>
+        {(step.featured || step.now) && <p className="mt-1 max-w-[60ch] text-xs text-lightGrey">{step.text}</p>}
         {step.tags && (
-          <ul className="mt-2.5 flex flex-wrap gap-1.5">
+          <ul className="mt-1.5 flex flex-wrap gap-1">
             {step.tags.map((t) => (
-              <li key={t} className="glass rounded-full px-2.5 py-0.5 text-xs text-lightCyan">
+              <li key={t} className="glass rounded-full px-2 py-0 text-[11px] text-lightCyan">
                 {t}
               </li>
             ))}
@@ -99,10 +99,10 @@ const AboutTimeline = () => {
 
   return (
     <div ref={ref} className="relative">
-      <span className="absolute top-4 bottom-4 left-[13px] md:left-[169px] w-0.5 rounded-full bg-brown"></span>
+      <span className="absolute top-3 bottom-3 left-[13px] w-0.5 rounded-full bg-brown"></span>
       <motion.span
         style={{ scaleY: reduced ? 1 : scaleY }}
-        className="absolute top-4 bottom-4 left-[13px] md:left-[169px] w-0.5 origin-top rounded-full bg-gradient-to-b from-orange to-cyan"
+        className="absolute top-3 bottom-3 left-[13px] w-0.5 origin-top rounded-full bg-gradient-to-b from-orange to-cyan"
       ></motion.span>
       <ol className="relative">
         {steps.map((s) => (
