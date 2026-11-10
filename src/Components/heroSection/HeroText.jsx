@@ -29,7 +29,7 @@ const HeroText = () => {
         className="md:text-[2.8rem] lg:text-6xl sm:text-4xl font-bold uppercase leading-tight text-white"
       >
         Hi, I&apos;m <br className="sm:hidden md:block" />
-        <span className="text-orange">Kaucher Ahmed</span>
+        <span className="text-orange">SM Kaucher</span>
       </motion.h1>
 
       <motion.p

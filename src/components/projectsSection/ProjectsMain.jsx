@@ -37,7 +37,7 @@ const projects = [
     year: "Jan 2025",
     status: "Source",
     image: "/images/website-img-130.jpg",
-    link: "https://github.com/kaucher018/Ecommerce-react-laravel-",
+    link: "https://github.com/smkaucher/Ecommerce-react-laravel-",
     tags: ["Laravel", "React"],
   },
   {
@@ -46,7 +46,7 @@ const projects = [
     year: "Dec 2024",
     status: "Source",
     image: "/images/website-img-10.png",
-    link: "https://github.com/kaucher018/ecommerce-website-by-laravel",
+    link: "https://github.com/smkaucher/ecommerce-website-by-laravel",
     tags: ["Laravel", "PHP"],
   },
   {
@@ -55,7 +55,7 @@ const projects = [
     year: "In progress",
     status: "WIP",
     image: "/images/Alternative-Social-Media-Platform-Blog-Resized.webp",
-    link: "https://github.com/kaucher018/Snaptok-social-media-laravel-",
+    link: "https://github.com/smkaucher/Snaptok-social-media-laravel-",
     tags: ["Laravel", "Social"],
   },
 ];

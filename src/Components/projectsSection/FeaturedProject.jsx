@@ -79,7 +79,7 @@ const FeaturedProject = ({ project }) => {
           </div>
           <img
             src={image}
-            alt="Regantify website"
+            alt="Regantify multi-vendor e-commerce platform built by SM Kaucher"
             className="w-full transition-transform duration-700 group-hover:scale-105"
           />
         </a>

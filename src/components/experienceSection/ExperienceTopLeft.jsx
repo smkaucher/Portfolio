@@ -12,7 +12,7 @@ const ExperienceTopLeft = () => {
         <ExperienceInfo number="2" text="Companies worked with" />
       </div>
       <p className="text-center">
-        1.5+ years of professional experience building dynamic and user-friendly full stack web applications, now working as a Software Engineer at Regantify IT Solution.
+        1.5+ years of professional experience building dynamic and user-friendly full stack web applications, now working as a Software Engineer at Reganto IT Solution.
       </p>
       {/* <ExperienceInfo number="$100k" text="Max Budget" /> */}
     </div>

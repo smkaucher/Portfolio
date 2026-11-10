@@ -15,7 +15,7 @@ const HeroPic = () => {
         <div className="relative h-full">
           <img
             src="/images/kaucher.png"
-            alt="Kaucher Ahmed"
+            alt="SM Kaucher, Software Engineer"
             className="h-full w-auto max-w-none object-contain object-bottom drop-shadow-[0_0_25px_rgba(21,209,233,0.45)]"
           />
           {/* light sweep, clipped to the cut-out via mask */}

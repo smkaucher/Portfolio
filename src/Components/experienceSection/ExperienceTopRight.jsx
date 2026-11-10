@@ -3,7 +3,7 @@ import SingleExperience from "./SingleExperience";
 const experiences = [
   {
     job: "Software Engineer",
-    company: "Regantify IT Solution",
+    company: "Reganto IT Solution",
     date: "Sep 2026 - Present",
     responsibilities: [
       "Building the vendor dashboard with React and TypeScript.",
